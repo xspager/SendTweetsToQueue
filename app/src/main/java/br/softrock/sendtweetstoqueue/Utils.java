@@ -7,14 +7,19 @@ import java.util.regex.Pattern;
  * Created by dlemos on 03/04/17.
  */
 
-public class Utils {
-    public static String cleanFluff(String subjectText) {
+class Utils {
+    static String cleanFluff(String subjectText) {
         // Remove the stupid extra fluff the youtube app include
         Pattern p = Pattern.compile("\"(.*)\"");
-        Matcher m = p.matcher(subjectText);
-        if (m.find()) {
-            subjectText = m.group(1);
+        try {
+            Matcher m = p.matcher(subjectText);
+            if (m.find()) {
+                subjectText = m.group(1);
+            }
+        } catch (NullPointerException e) {
+            subjectText = "";
         }
+
         return subjectText;
     }
 }
