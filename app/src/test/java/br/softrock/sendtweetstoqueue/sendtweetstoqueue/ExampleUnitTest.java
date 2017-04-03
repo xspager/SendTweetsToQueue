@@ -1,4 +1,4 @@
-package com.example.dlemos.sendtweetstoqueue2;
+package br.softrock.sendtweetstoqueue.sendtweetstoqueue;
 
 import org.junit.Test;
 
