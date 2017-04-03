@@ -44,4 +44,13 @@ public class UtilsTest {
 
         assertEquals("Descomplica: Estudar para o ENEM agora é Online!", result);
     }
+
+    @Test
+    public void testExpandURL() throws Exception {
+        String url = "https://youtu.be/6xd_ZAPZIDk";
+
+        String result = Utils.expandURL(url);
+
+        assertEquals("https://www.youtube.com/watch?v=6xd_ZAPZIDk", result);
+    }
 }

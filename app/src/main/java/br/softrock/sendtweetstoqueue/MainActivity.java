@@ -41,7 +41,19 @@ public class MainActivity extends AppCompatActivity {
         if (sharedText != null) {
             subjectText = Utils.cleanFluff(subjectText);
 
+            sharedText = Utils.expandURL(sharedText);
+
             Log.d("SendTweetToQueue", subjectText + " " + sharedText);
+
+            String originalMessageEscaped = Utils.formatTweetURL(subjectText + " " + sharedText);
+
+            if (originalMessageEscaped != null) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(originalMessageEscaped));
+                startActivity(i);
+            } else {
+                // Some Error
+            }
         }
     }
 
