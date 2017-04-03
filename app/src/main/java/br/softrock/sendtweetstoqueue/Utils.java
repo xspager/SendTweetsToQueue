@@ -1,4 +1,4 @@
-package br.softrock.sendtweetstoqueue.sendtweetstoqueue;
+package br.softrock.sendtweetstoqueue;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

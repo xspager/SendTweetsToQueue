@@ -1,4 +1,4 @@
-package br.softrock.sendtweetstoqueue.sendtweetstoqueue;
+package br.softrock.sendtweetstoqueue;
 
 import org.junit.Test;
 
